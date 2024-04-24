@@ -1,1 +1,8 @@
-FROM Ruby:2.5
+FROM ruby:3.2.2
+RUN apt-get update && apt-get install -y build-essential libpq-dev nodejs 
+RUN mkdir workdir
+WORKDIR /workdir
+ADD Gemfile /workdir/Gemfile
+ADD Gemfile.lock /workdir/Gemfile.lock
+RUN bundle install
+ADD . /workdir/
