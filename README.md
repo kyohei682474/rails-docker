@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##  環境構築手順について
+*  このプロジェクトではdockerを利用することでRailsアプリケーションとPostgresを簡単にセットアップして実行することができます。
+### 前提条件
+* DockerとDockerHubがインストールされていることが必要です。
+* DockerHubはこちらの[公式サイト](https://hub.docker.com/)からダウンロードおよびインストールができます。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
