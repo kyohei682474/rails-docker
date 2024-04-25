@@ -44,7 +44,13 @@ services:
     depends_on:
       - db
 ```
-5.config/database.ymlの記述
+5.新しいファイルの所有者を変更。
+```
+sudo chown -R $USER:$USER .
+```
+
+6.データベースと接続を行う。
+#### config/database.yml
 ```
 default: &default
   adapter: postgresql
@@ -54,7 +60,7 @@ default: &default
   password:
   pool: 5
 ```
-6.アプリケーションを起動する。
-```
+
 $ docker-compose up
 ```
+7.
