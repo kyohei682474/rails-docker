@@ -5,7 +5,7 @@
 ### 前提条件
 * DockerとDockerHubがインストールされていることが必要です。
 * DockerHubはこちらの[公式サイト](https://hub.docker.com/)からダウンロードおよびインストールができます。
-### インストール手順
+### 手順
 1.リポジトリのcloneを行い、作業リポジトリに移動する。
 ```
 $ git clone https://github.com/ihatov08/rails7_docker_template
@@ -25,4 +25,36 @@ ADD Gemfile /workdir/Gemfile
 ADD Gemfile.lock /workdir/Gemfile.lock
 RUN bundle install
 ADD . /workdir/
+```
+4.docker-compose.ymlの記述
+```
+version: '12'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: trust
+  web:
+    build: .
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/workdir
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+```
+5.config/database.ymlの記述
+```
+default: &default
+  adapter: postgresql
+  encoding: unicode 
+  host: db
+  username: postgres
+  password:
+  pool: 5
+```
+6.アプリケーションを起動する。
+```
+$ docker-compose up
 ```
