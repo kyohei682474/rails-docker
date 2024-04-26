@@ -46,7 +46,7 @@ services:
 ```
 5.新しいファイルの所有者を変更。
 ```
-sudo chown -R $USER:$USER .
+$ sudo chown -R $USER:$USER .
 ```
 
 6.データベースと接続を行う。
@@ -60,7 +60,12 @@ default: &default
   password:
   pool: 5
 ```
-
-$ docker-compose up
+7.アプリケーションに起動
 ```
-7.
+$ docker-compose up 
+```
+* ブラウザでlocalhost:3000を入力
+
+8.databaseの作成。
+* ブラウザ上のcreate databaseのボタンを押すとアプリケーションが起動する。
+
