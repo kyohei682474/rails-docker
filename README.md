@@ -80,7 +80,7 @@ $ docker-compose up
   1.  taskの詳細ページにあるBack to tasksをクリックすると作成したタスクの一覧画面に移動する。
 
 ### taskの詳細を表示する
-  １.  taskの一覧ページにあるShow this taskをクリックするとtaskの詳細ページに遷移する。
+  1.  taskの一覧ページにあるShow this taskをクリックするとtaskの詳細ページに遷移する。
 
 ### taskの編集
   1.  taskの詳細ページにあるEdit this taskをクリックすると変更したいtaskの編集画面が表示される。
