@@ -69,3 +69,26 @@ $ docker-compose up
 8.databaseの作成。
 * ブラウザ上のcreate databaseのボタンを押すとアプリケーションが起動する。
 
+## アプリケーション(Myapp)の使用方法
+
+### taskの作成
+1.New taskをクリックしてtaskの入力画面に遷移する。
+２.TitleとDescriptionの欄に入力してtaskのtitleとDescriptionを記述してCreate　Taskボタンを押す。
+３.taskが上手く作成されるとtaskのTitleとDescriptionが表示される。
+
+### taskの一覧を表示する
+1.taskの詳細ページにあるBack to tasksをクリックすると作成したタスクの一覧画面に移動する。
+
+### taskの詳細を表示する
+１.taskの一覧ページにあるShow this taskをクリックするとtaskの詳細ページに遷移する。
+
+### taskの編集
+1.taskの詳細ページにあるEdit this taskをクリックすると変更したいtaskの編集画面が表示される。
+2.TitleとDescriptionに変更を加える。
+3.Update Taskをクリックすると変更された内容が表示される。
+
+### taskの削除
+１.task一覧ページに表示されているtaskの中から削除したいタスクのShow this taskをクリックする。
+2.taskの詳細ページにあるDestroy this taskをクリックする。
+3.taskは削除されてtask一覧ページに遷移する。
+
