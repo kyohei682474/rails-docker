@@ -49,8 +49,9 @@ services:
 $ sudo chown -R $USER:$USER .
 ```
 
-  6.  データベースと接続を行う。
-#### config/database.yml
+  6.  データベースと接続を行う。<br>
+  
+ `config/database.yml`
 ```
 default: &default
   adapter: postgresql
@@ -64,9 +65,9 @@ default: &default
 ```
 $ docker-compose up 
 ```
-* ブラウザでlocalhost:3000を入力
+*   ブラウザでlocalhost:3000を入力
 
-  8.  databaseの作成。
+  9.  databaseの作成。
 * ブラウザ上のcreate databaseのボタンを押すとアプリケーションが起動する。
 
 ## アプリケーション(Myapp)の使用方法
