@@ -9,7 +9,7 @@
   1.  リポジトリのcloneを行い、作業リポジトリに移動する。
 ```
 $ git clone https://github.com/ihatov08/rails7_docker_template
-cd rails-docker
+$ cd rails-docker
 ```
   2.  Dockerfileとdocker-compose.ymlを作成する。
 ```
