@@ -41,7 +41,7 @@ services:
       POSTGRES_PASSWORD: trust
   web:
     build: .
-    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && rails db:migrate && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/workdir
     ports:
@@ -72,8 +72,6 @@ $ docker-compose up
 ```
 *   ブラウザでlocalhost:3000を入力
 
-  9.  databaseの作成。
-* ブラウザ上のcreate databaseのボタンを押すとアプリケーションが起動する。
 
 ## アプリケーション(Myapp)の使用方法
 
