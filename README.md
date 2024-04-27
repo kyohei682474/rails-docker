@@ -69,7 +69,7 @@ default: &default
   7.  アプリケーションに起動
 * 初回のみデータベースを作成
 ```
-docker-compose run --rm web rails db:create
+$ docker-compose run --rm web rails db:create
 ```
 
 ```
