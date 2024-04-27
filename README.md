@@ -67,31 +67,38 @@ default: &default
   pool: 5
 ```
   7.  アプリケーションに起動
+* 初回のみデータベースを作成
+```
+docker-compose run --rm web rails db:create
+```
+
 ```
 $ docker-compose up 
 ```
 *   ブラウザでlocalhost:3000を入力
 
 
-## アプリケーション(Myapp)の使用方法
-
-### taskの作成
+## アプリケーション(Myapp)の内容と使用方法
+### アプリケーション内容
+taksを作成、詳細を記入し、管理する簡易的なアプリケーション
+### 使用方法
+#### taskの作成
   1.  New taskをクリックしてtaskの入力画面に遷移する。
   2.  TitleとDescriptionの欄に入力してtaskのtitleとDescriptionを記述してCreate　Taskボタンを押す。
   3.  taskが上手く作成されるとtaskのTitleとDescriptionが表示される。
 
-### taskの一覧を表示する
+#### taskの一覧を表示する
   1.  taskの詳細ページにあるBack to tasksをクリックすると作成したタスクの一覧画面に移動する。
 
-### taskの詳細を表示する
+#### taskの詳細を表示する
   1.  taskの一覧ページにあるShow this taskをクリックするとtaskの詳細ページに遷移する。
 
-### taskの編集
+#### taskの編集
   1.  taskの詳細ページにあるEdit this taskをクリックすると変更したいtaskの編集画面が表示される。
   2.  TitleとDescriptionに変更を加える。
   3.  Update Taskをクリックすると変更された内容が表示される。
 
-### taskの削除
+#### taskの削除
   1.  task一覧ページに表示されているtaskの中から削除したいタスクのShow this taskをクリックする。
   2.  taskの詳細ページにあるDestroy this taskをクリックする。
   3.  taskは削除されてtask一覧ページに遷移する。
