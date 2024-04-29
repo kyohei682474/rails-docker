@@ -5,9 +5,7 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     postgresql-client \
     yarn
-RUN mkdir workdir
 WORKDIR /workdir
-ADD Gemfile /workdir/Gemfile
-ADD Gemfile.lock /workdir/Gemfile.lock
+ADD Gemfile Gemfile.lock /workdir/
 RUN bundle install
 ADD . /workdir/
